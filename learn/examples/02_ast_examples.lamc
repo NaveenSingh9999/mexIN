@@ -1,0 +1,67 @@
+// LAMC Example Code for AST Demo
+// Shows how different constructs become AST nodes
+
+// Expression becomes: BinaryExpr(+, Literal(2), Literal(3))
+result = 2 + 3
+
+// Complex expression with precedence
+// Becomes: BinaryExpr(+, BinaryExpr(*, Literal(2), Literal(3)), Literal(4))
+complex = 2 * 3 + 4
+
+// Variable declaration with type
+// VarDecl(name="age", type="int", init=Literal(25))
+age: int = 25
+
+// Function declaration
+// FunctionDecl(name="square", params=[Param("x")], body=Block(...))
+func square(x)
+    return x * x
+
+// Function with multiple statements
+func calculate(a, b)
+    sum = a + b
+    product = a * b
+    return sum + product
+
+// Control flow - if statement
+// IfStmt(condition=BinaryExpr(...), then=Block(...), else=Block(...))
+func check_age(age)
+    if age >= 18
+        print("Adult")
+    else
+        print("Minor")
+
+// Loops create different AST nodes
+func demo_loops()
+    // ForStmt(var="i", iterable=RangeExpr(...), body=Block(...))
+    for i in 0..10
+        print(i)
+    
+    // WhileStmt(condition=BinaryExpr(...), body=Block(...))
+    x = 0
+    while x < 5
+        x = x + 1
+
+// Arrays become ArrayExpr nodes
+numbers = [1, 2, 3, 4, 5]
+
+// Dictionary becomes DictExpr
+person = {
+    "name": "Alice",
+    "age": 30
+}
+
+// Function calls
+// CallExpr(callee=Identifier("print"), args=[Literal("Hello")])
+print("Hello")
+
+// Nested function calls
+result = square(add(2, 3))
+
+// Member access
+// MemberExpr(object=Identifier("person"), member="name")
+name = person.name
+
+// Index access
+// IndexExpr(object=Identifier("numbers"), index=Literal(0))
+first = numbers[0]

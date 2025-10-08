@@ -1,0 +1,61 @@
+// LAMC Example Code for Lexer Demo
+// This file demonstrates various LAMC language features
+
+// Simple variable assignment
+x = 42
+name = "Alice"
+pi = 3.14159
+
+// Function definition
+func greet(name)
+    print("Hello, " + name + "!")
+
+// Function with multiple parameters
+func add(a, b)
+    return a + b
+
+// Control flow - if statement
+func check_number(x)
+    if x > 10
+        print("Big number")
+    else if x > 5
+        print("Medium number")
+    else
+        print("Small number")
+
+// Loops
+func count_to_ten()
+    for i in 0..10
+        print(i)
+
+// While loop
+func countdown(n)
+    while n > 0
+        print(n)
+        n = n - 1
+
+// Arrays
+numbers = [1, 2, 3, 4, 5]
+first = numbers[0]
+last = numbers[-1]
+
+// Dictionary
+person = {
+    "name": "Bob",
+    "age": 30,
+    "city": "NYC"
+}
+
+// Main function
+func main()
+    greet("World")
+    result = add(10, 20)
+    print("Sum: " + result)
+    
+    check_number(15)
+    count_to_ten()
+
+// Comments work like this
+/* Multi-line comments
+   also work in LAMC
+   for longer explanations */

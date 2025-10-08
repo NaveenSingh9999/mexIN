@@ -1,0 +1,4 @@
+// Simple LAMC test program
+x = 42
+y = x + 10
+print(y)

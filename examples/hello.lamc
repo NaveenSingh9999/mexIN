@@ -1,0 +1,5 @@
+// LAMC Example - Simple Hello World
+func main()
+    print("Hello, LAMC!")
+    x = 42
+    print("The answer is: " + x)

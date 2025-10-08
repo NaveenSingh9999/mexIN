@@ -1,0 +1,35 @@
+// LAMC Parser Test - Showcasing Current Capabilities
+// This file demonstrates what the parser can currently handle
+
+// Variable declarations with literals
+x = 42
+y = 3.14
+name = "LAMC"
+active = true
+
+// Variable declarations with expressions
+sum = 10 + 20
+product = 5 * 6
+complex = (2 + 3) * 4
+comparison = x > 10
+
+// Expression statements - function calls
+print("Hello, LAMC!")
+print(x)
+print(sum)
+
+// Function calls with multiple arguments
+result = add(10, 20)
+value = multiply(x, y)
+
+// Nested expressions
+total = add(multiply(2, 3), divide(10, 2))
+
+// Array indexing (AST supports it, will be tested separately)
+// first = arr[0]
+
+// Member access (AST supports it, will be tested separately)  
+// len = obj.length
+
+// Complex chained operations
+// output = obj.method(x).property[0]
